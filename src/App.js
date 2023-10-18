@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Card, CardContent, Grid, TextField } from "@mui/material";
+import { Movie } from "./component/Movie";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Card sx={{ bgcolor: "lightblue" }}>
+      <CardContent>
+        <Grid container>
+          <Grid item xs={12} sx={{ marginBottom: "25px", marginTop:"20px" }}>
+            <TextField label="Search Here...." fullWidth style={{border:"2px solid blue"}} />
+          </Grid>
+        </Grid>
+
+        <Movie />
+      </CardContent>
+    </Card>
   );
 }
 
